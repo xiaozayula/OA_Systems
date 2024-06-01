@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoyu.mapper.WorkContentMapper">
+
+    <select id="selectWorkContentsByDepartmentId" resultType="com.xiaoyu.entity.WorkContent">
+        SELECT wc.*
+        FROM work_content wc
+                 JOIN work_group wg ON wc.group_id = wg.group_id
+        WHERE wg.department_id = #{departmentId}
+    </select>
+
+    <insert id="insert" parameterType="com.xiaoyu.entity.WorkContent">
+        INSERT INTO work_content (content_id, group_id, content, deadline )
+        VALUES (#{contentId}, #{groupId}, #{content}, #{deadline} )
+    </insert>
+
+    <select id="selectWorkContentsBycontentId" resultType="com.xiaoyu.entity.WorkContent">
+        SELECT wc.*
+        FROM work_content wc
+        WHERE wc.content_id = #{contentId}
+    </select>
+</mapper>

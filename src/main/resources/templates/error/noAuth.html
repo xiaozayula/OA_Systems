@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>权限不足提示</title>
+</head>
+<body>
+<h3>对不起，您的权限不足！</h3>
+<div></div>
+<script>
+    var div = document.querySelector('div');
+    var timer = 5;    //提前先调用以下函数 防止刷新时页面出现空白
+    skip();
+    setInterval(skip, 1000);
+    function skip(){
+        if(timer == 0){
+            location.href = '/';
+        }
+        div.innerHTML = '您将在' + timer + '钟之后跳转到首页';
+        timer--;
+    }
+</script>
+</body>
+</html>

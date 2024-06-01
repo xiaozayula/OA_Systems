@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoyu.mapper.NoticeMapper">
+
+    <select id="findNoticesByDepartmentId" resultType="com.xiaoyu.entity.Notice">
+        SELECT * FROM notices WHERE departmentId = #{departmentId}
+    </select>
+
+    <insert id="insertNotice">
+        INSERT INTO notices (noticeId, departmentId, title, content, publishTime)
+        VALUES (#{notice.noticeId}, #{notice.departmentId}, #{notice.title}, #{notice.content}, #{notice.publishTime})
+    </insert>
+
+</mapper>

@@ -1,20 +1,19 @@
-package org.example.entity;
+package com.xiaoyu.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-// 统一响应结果
-@NoArgsConstructor// 无参
-@AllArgsConstructor// 全参
-
-@Data
 /**
  * Created with IntelliJ IDEA.
  *
  * @Author: zhangyu
  * @Date: 2024/05/13/16:09
- * @Description:
+ * @Description: 统一响应结果
  */
+@NoArgsConstructor// 无参
+@AllArgsConstructor// 全参
+@Data
+
 public class Result<T> {
     private Integer code;// 业务状态码 0-成功 1-失败
     private String message;// 提示信息

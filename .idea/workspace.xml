@@ -4,35 +4,195 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43980dd0-1226-49cb-9699-392dfa3507b9" name="Changes" comment="" />
+    <list default="true" id="43980dd0-1226-49cb-9699-392dfa3507b9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/OASystemsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/Satoken/AjaxJson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/Satoken/StpInterfaceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/config/SaTokenConfigure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/controller/DepartmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/controller/ErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/controller/NoticeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/controller/RecordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/controller/RequestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/controller/WorkContentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/controller/WorkGroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/controller/WorkProgressController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/entity/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/entity/Notice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/entity/Permit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/entity/Record.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/entity/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/entity/WorkContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/entity/WorkGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/entity/WorkProgressCommit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/enums/ApplicationStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/enums/ApplicationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/exception/GlobalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/mapper/NoticeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/mapper/RecordMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/mapper/RequestMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/mapper/WorkContentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/mapper/WorkGroupMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/mapper/WorkProgressMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/NoticeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/RecordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/RequestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/WorkContentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/WorkGroupService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/WorkProgressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/impl/NoticeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/impl/RecordServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/impl/RequestServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/impl/WorkContentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/impl/WorkGroupServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/service/impl/WorkProgressServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/utils/SaltMD5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/WorkGroupMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/xiaoyu/mapper/NoticeMapper .xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/xiaoyu/mapper/RecordMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/xiaoyu/mapper/RequestMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/xiaoyu/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/xiaoyu/mapper/WorkContentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/xiaoyu/mapper/WorkGroup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/xiaoyu/mapper/WorkProgressMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/noAuth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f79d28d3-989d-4d54-9b01-88237e18f98f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f79d28d3-989d-4d54-9b01-88237e18f98f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xiaoyu/entity/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xiaoyu/AppTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Program Files\mvn-repository" />
+        <option name="mavenHome" value="D:\Program Files\apache-maven-3.9.6" />
+        <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.9.6\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2gP6cE4ogvi484lVUYsZWk5wRuI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.OA_Systems [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.OA_Systems [install].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.App.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OASystemsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/桌面/00000&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\练手项目\OA_Systems\OA_Systems\src\main\resources\templates\error" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.xiaoyu.utils" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="OASystemsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="OA_Systems" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyu.OASystemsApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaoyu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.OASystemsApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-f644763e9732-af3fa2b8" />
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24fca987" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -41,7 +201,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715586944527</updated>
-      <workItem from="1715586945651" duration="1000" />
+      <workItem from="1715586945651" duration="541000" />
+      <workItem from="1715587501801" duration="9695000" />
+      <workItem from="1715597565588" duration="6000" />
+      <workItem from="1715600724794" duration="3374000" />
+      <workItem from="1715604130617" duration="7000" />
+      <workItem from="1715654730317" duration="13416000" />
+      <workItem from="1715743184590" duration="7923000" />
+      <workItem from="1715771238961" duration="4834000" />
+      <workItem from="1715842778774" duration="1876000" />
+      <workItem from="1716011147507" duration="1407000" />
+      <workItem from="1716014939549" duration="12728000" />
+      <workItem from="1716103185025" duration="2084000" />
+      <workItem from="1716279384641" duration="10918000" />
+      <workItem from="1716290871305" duration="219000" />
+      <workItem from="1716356899580" duration="6684000" />
+      <workItem from="1716440254759" duration="3008000" />
+      <workItem from="1716446860397" duration="2403000" />
+      <workItem from="1716531893428" duration="9496000" />
+      <workItem from="1716617505059" duration="13072000" />
+      <workItem from="1716707311550" duration="5412000" />
+      <workItem from="1716712890908" duration="573000" />
+      <workItem from="1716717885761" duration="9348000" />
+      <workItem from="1716791137106" duration="11947000" />
+      <workItem from="1716971320292" duration="8635000" />
+      <workItem from="1717049023783" duration="6389000" />
+      <workItem from="1717067182729" duration="4919000" />
+      <workItem from="1717141055599" duration="3501000" />
+      <workItem from="1717232162338" duration="321000" />
     </task>
     <servers />
   </component>

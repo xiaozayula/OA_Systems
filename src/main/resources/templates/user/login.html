@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<h3>登录</h3>
+<div th:if="${msg} != null">
+    <label th:text="${msg}" style="color:red;"/>
+</div>
+
+<form action="/checkLogin" method="post">
+    用户名：<input type="text" name="username"/> <br/>
+    密码：<input type="password" name="password"> <br/>
+    <button type="submit">提交</button>
+</form>
+</body>
+</html>

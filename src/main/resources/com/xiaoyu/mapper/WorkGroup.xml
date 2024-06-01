@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoyu.mapper.WorkGroupMapper">
+
+    <insert id="insert" parameterType="com.xiaoyu.entity.WorkGroup">
+        INSERT INTO work_group (group_id, department_id, group_name, leader_id)
+        VALUES (#{groupId}, #{departmentId}, #{groupName}, #{leaderId})
+        </insert>
+
+</mapper>

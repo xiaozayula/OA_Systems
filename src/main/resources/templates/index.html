@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:shiro="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<h3>这是首页！</h3>
+<div th:if="${username} != null">
+    <label th:text="${username}">欢迎您，${username}</label>
+    <br/>
+    <a href="/logout">注销</a>
+</div>
+
+<div th:if="${username} == null">
+    <a href="/user/Login">登录</a>
+</div>
+
+<div shiro:hasPermission="管理员">
+    <a href="/user/add">添加用户</a>
+</div>
+<div shiro:hasPermission="员工">
+    <a href="/user/update">更新用户</a>
+</div>
+</body>
+</html>

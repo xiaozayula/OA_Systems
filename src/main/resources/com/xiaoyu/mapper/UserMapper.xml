@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoyu.mapper.UserMapper">
+    <!--动态sql-->
+    <select id="findByUserName" resultType="com.xiaoyu.entity.User">
+        select * from user
+                 <where>username=#{username}</where>
+    </select>
+    <select id="selectUserById" resultType="com.xiaoyu.entity.User">
+        select *from user where id=#{userid}
+    </select>
+    <insert id="register">
+        insert into user(username,password,create_time,update_time)
+        values(#{username},#{password},now(),now())
+    </insert>
+
+    <select id="getPermitByUserId" resultMap="permitResultMap">
+        SELECT p.*
+        FROM UserPermission up
+                 INNER JOIN Permit p ON up.permitId = p.PermitId
+        WHERE up.userId = #{userId}
+    </select>
+    <!-- 权限结果映射 -->
+    <resultMap id="permitResultMap" type="com.xiaoyu.entity.Permit">
+        <id property="permitId" column="PermitId"/>
+        <result property="permitName" column="permitName"/>
+        <result property="url" column="url"/>
+    </resultMap>
+    <select id="getDepartmentNameByUserId" resultType="string">
+        SELECT d.departmentName
+        FROM users u
+                 JOIN departments d ON u.departmentId = d.departmentId
+        WHERE u.userId = #{userId}
+    </select>
+    <select id="selectUsersByDepartmentId" resultType="com.xiaoyu.entity.User">
+        SELECT * FROM users WHERE departmentId = #{departmentId}
+    </select>
+    <select id="selectDepartmentIdByUserId" resultType="java.lang.Long">
+        SELECT  department_id FROM user WHERE UserID=#{userId}
+    </select>
+
+    <!-- 更新用户的部门信息 -->
+    <update id="updateUserDepartment" parameterType="com.xiaoyu.entity.User">
+        UPDATE users
+        SET department_id = #{departmentId}
+        WHERE user_id = #{userId}
+    </update>
+
+</mapper>
