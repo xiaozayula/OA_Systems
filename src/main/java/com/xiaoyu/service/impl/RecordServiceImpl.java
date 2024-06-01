@@ -1,5 +1,7 @@
 package com.xiaoyu.service.impl;
 
+import com.xiaoyu.enums.ApplicationStatus;
+import com.xiaoyu.enums.ApplicationType;
 import com.xiaoyu.mapper.RecordMapper;
 import com.xiaoyu.service.RecordService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,13 +24,13 @@ public class RecordServiceImpl implements RecordService {
 
 
     @Override
-    public void addRecord(Long userId, Long requestId, String actionType, String actionStatus, LocalDateTime actionTime, String details) {
+    public void addRecord(Long userId, Long requestId, ApplicationType applicationType, ApplicationStatus status, LocalDateTime actionTime, String details) {
 
         Record record = new Record();
         record.setUserId(userId);
         record.setRequestId(requestId);
-        record.setActionType(actionType);
-        record.setActionStatus(actionStatus);
+        record.setApplicationType(applicationType);
+        record.setStatus(status);
         record.setActionTime(actionTime);
         record.setDetails(details);
         recordMapper.insertRecord(record);

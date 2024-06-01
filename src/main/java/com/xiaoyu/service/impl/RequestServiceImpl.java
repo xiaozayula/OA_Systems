@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import static com.xiaoyu.enums.ApplicationStatus.SUCCESS;
+import static com.xiaoyu.enums.ApplicationType.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -38,7 +39,7 @@ public class RequestServiceImpl implements RequestService {
     //创建加入部门请求
     @Override
     public void createJoinRequest(Request request, Long todepartmentId) {
-        request.setApplicationType(ApplicationType.JOIN_DEPARTMENT);
+        request.setApplicationType(JOIN_DEPARTMENT);
         request.setStatus(ApplicationStatus.PENDING);
         request.setRequestTime(LocalDateTime.now());
         request.setTodepartmentId(todepartmentId);
@@ -48,7 +49,7 @@ public class RequestServiceImpl implements RequestService {
     //创建转部门请求
     @Override
     public void createTransferRequest(Request request, Long todepartmentId) {
-        request.setApplicationType(ApplicationType.JOIN_DEPARTMENT);
+        request.setApplicationType(JOIN_DEPARTMENT);
         request.setStatus(ApplicationStatus.PENDING);
         request.setRequestTime(LocalDateTime.now());
         request.setTodepartmentId(todepartmentId);
@@ -59,7 +60,7 @@ public class RequestServiceImpl implements RequestService {
     @Override
 
     public void createLeaveRequest(Request request) {
-        request.setApplicationType(ApplicationType.LEAVE);
+        request.setApplicationType(LEAVE);
         request.setStatus(ApplicationStatus.PENDING);
         request.setRequestTime(LocalDateTime.now());
         requestMapper.insertRequest(request);
@@ -85,7 +86,7 @@ public class RequestServiceImpl implements RequestService {
                 }
         requestMapper.updateRequest(request);
         // 添加记录到Record表
-        recordService.addRecord(request.getUserId(), request.getRequestId(), "JOIN_DEPARTMENT", request.getStatus().toString(), LocalDateTime.now(), null);
+        recordService.addRecord(request.getUserId(), request.getRequestId(), JOIN_DEPARTMENT, request.getStatus(), LocalDateTime.now(), null);
         return result;
     }
 
@@ -102,7 +103,7 @@ public class RequestServiceImpl implements RequestService {
             request.setStatus(ApplicationStatus.AWAITING_SECOND_APPROVAL);
         } else {
             request.setStatus(ApplicationStatus.FAILURE);
-            request.setApprovalSuccess(false);
+
             return false;
         }
         requestMapper.updateRequest(request);
@@ -114,7 +115,7 @@ public class RequestServiceImpl implements RequestService {
             request.setStatus(ApplicationStatus.FAILURE);
         }
         requestMapper.updateRequest(request);
-        recordService.addRecord(request.getUserId(), request.getRequestId(), "TRANSFER_DEPARTMENT", request.getStatus().toString(), LocalDateTime.now(), null);
+        recordService.addRecord(request.getUserId(), request.getRequestId(), TRANSFER_DEPARTMENT, request.getStatus(), LocalDateTime.now(), null);
         return secondLevelResult;
     }
 
@@ -133,7 +134,7 @@ public class RequestServiceImpl implements RequestService {
             }
         }
         requestMapper.updateRequest(request);
-        recordService.addRecord(request.getUserId(), request.getRequestId(), "LEAVE", request.getStatus().toString(), LocalDateTime.now(), null);
+        recordService.addRecord(request.getUserId(), request.getRequestId(), LEAVE, request.getStatus(), LocalDateTime.now(), null);
         return result;
     }
 
